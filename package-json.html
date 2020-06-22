@@ -23,30 +23,30 @@
 <meta charset='utf-8'>
 <meta content='width=device-width, initial-scale=1.0' name='viewport'>
 <link href='./assets/favicon.png' rel='shortcut icon'>
-<meta content='/sed.html' name='app:pageurl'>
+<meta content='/package-json.html' name='app:pageurl'>
 
 
-  <title>sed cheatsheet</title>
-  <meta content='sed cheatsheet' property='og:title'>
-  <meta content='sed cheatsheet' property='twitter:title'>
+  <title>package.json cheatsheet</title>
+  <meta content='package.json cheatsheet' property='og:title'>
+  <meta content='package.json cheatsheet' property='twitter:title'>
   <meta content='article' property='og:type'>
 
 
 
-  <meta content='https://assets.devhints.io/previews/sed.jpg?t=20200622185520' property='og:image'>
-  <meta content='https://assets.devhints.io/previews/sed.jpg?t=20200622185520' property='twitter:image'>
+  <meta content='https://assets.devhints.io/previews/package-json.jpg?t=20200622185520' property='og:image'>
+  <meta content='https://assets.devhints.io/previews/package-json.jpg?t=20200622185520' property='twitter:image'>
   <meta content='900' property='og:image:width'>
   <meta content='471' property='og:image:height'>
 
 
 
-  <meta content="One-page guide to sed: usage, examples, and more. Here’s home hints on using sed." name="description">
-  <meta content="One-page guide to sed: usage, examples, and more. Here’s home hints on using sed." property="og:description">
-  <meta content="One-page guide to sed: usage, examples, and more. Here’s home hints on using sed." property="twitter:description">
+  <meta content="The one-page guide to package.json: usage, examples, links, snippets, and more." name="description">
+  <meta content="The one-page guide to package.json: usage, examples, links, snippets, and more." property="og:description">
+  <meta content="The one-page guide to package.json: usage, examples, links, snippets, and more." property="twitter:description">
 
 
-<link rel="canonical" href="https://devhints.io/sed">
-<meta name="og:url" content="https://devhints.io/sed">
+<link rel="canonical" href="https://devhints.io/package-json">
+<meta name="og:url" content="https://devhints.io/package-json">
 
 
 
@@ -62,7 +62,7 @@
 
 
 
-  <meta content='CLI' property='article:section'>
+  <meta content='Node.js' property='article:section'>
 
 
 
@@ -114,9 +114,9 @@ gtag('config','UA-106902774-1');
     "@type": "WebPage",
     "@id": "https://google.com/article"
   },
-  "headline": "sed cheatsheet",
-  "image": [ "https://assets.devhints.io/previews/sed.jpg?t=20200622185520" ],
-  "description": "One-page guide to sed: usage, examples, and more. Here’s home hints on using sed."
+  "headline": "package.json cheatsheet",
+  "image": [ "https://assets.devhints.io/previews/package-json.jpg?t=20200622185520" ],
+  "description": "The one-page guide to package.json: usage, examples, links, snippets, and more."
 }
 </script>
 <script type='application/ld+json'>
@@ -127,15 +127,15 @@ gtag('config','UA-106902774-1');
     "@type": "ListItem",
     "position": 1,
     "item": {
-      "@id": "https://devhints.io/#cli",
-      "name": "CLI"
+      "@id": "https://devhints.io/#node.js",
+      "name": "Node.js"
     }
   },{
     "@type": "ListItem",
     "position": 2,
     "item": {
-      "@id": "https://devhints.io/sed",
-      "name": "sed"
+      "@id": "https://devhints.io/package-json",
+      "name": "package.json"
     }
   }]
 }
@@ -161,8 +161,8 @@ gtag('config','UA-106902774-1');
       <div class='actions'>
         
 <ul class="social-list social page-actions">
-  <li class="facebook link hint--bottom" data-hint="Share on Facebook"><a href="https://www.facebook.com/sharer/sharer.php?u=https://devhints.io/sed.html" target="share"><span class="text"></span></a></li>
-  <li class="twitter link hint--bottom" data-hint="Share on Twitter"><a href="https://twitter.com/intent/tweet?text=The%20ultimate%20cheatsheet%20for%20sed.%20https://devhints.io/sed.html" target="share"><span class="text"></span></a></li>
+  <li class="facebook link hint--bottom" data-hint="Share on Facebook"><a href="https://www.facebook.com/sharer/sharer.php?u=https://devhints.io/package-json.html" target="share"><span class="text"></span></a></li>
+  <li class="twitter link hint--bottom" data-hint="Share on Twitter"><a href="https://twitter.com/intent/tweet?text=The%20ultimate%20cheatsheet%20for%20package.json.%20https://devhints.io/package-json.html" target="share"><span class="text"></span></a></li>
   
 </ul>
 
@@ -170,7 +170,7 @@ gtag('config','UA-106902774-1');
         
           <ul class='page-actions'>
             <li class='link github -button hint--bottom' data-hint='Edit this page on GitHub'>
-              <a href='https://github.com/rstacruz/cheatsheets/blob/master/sed.md'>
+              <a href='https://github.com/rstacruz/cheatsheets/blob/master/package-json.md'>
                 <span class='text -visible'>Edit</span>
               </a>
             </li>
@@ -184,7 +184,7 @@ gtag('config','UA-106902774-1');
 
 <div class='body-area'>
   <header class='main-heading -center' role='banner'>
-    <h1 class='h1'>sed <em>cheatsheet</em></h1>
+    <h1 class='h1'>package.json <em>cheatsheet</em></h1>
 
     <div class='adbox' data-js-no-preview>
       
@@ -209,41 +209,88 @@ gtag('config','UA-106902774-1');
   
 
   
-    <div class='intro-content MarkdownBody'>
-      <p>Here’s home hints on using sed.</p>
-
-    </div>
-  
 
   <main class='post-content MarkdownBody' data-js-main-body data-js-anchors role='main'>
-    <h3 id="in-place-replacements">In place replacements</h3>
+    <h3 id="basic">Basic</h3>
 
-<h4 id="in-gnu-sed-use--i-without-arg">In GNU sed: use <code>-i</code> without arg.</h4>
-
-<pre><code class="language-bash">sed -i -e 's/foo/bar/' example.md
+<pre data-line="2,3,4,5"><code class="language-json">{
+  "name": "expo",
+  "description": "My package",
+  "version": "0.1.0",
+  "license": "MIT",
+  "keywords": ["http", "server"],
+  "author": "Rico Sta. Cruz &lt;rstacruz@users.noreply.github.com&gt;",
+  "engines": {
+    "node": "&gt;=0.8.0"
+  },
+  "main": "index",
+  "bin": {
+    "command": "./bin/command"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rstacruz/___.git"
+  },
+}
 </code></pre>
 
-<h4 id="in-osx--i--is-required">In OSX, <code>-i ''</code> is required.</h4>
+<p>Highlighted lines are required.</p>
 
-<pre><code class="language-bash">sed -i '' -e 's/foo/bar/' example.md
+<h3 id="dependencies">Dependencies</h3>
+
+<pre><code class="language-json">"dependencies": {
+  "colors":   "*",
+  "flatiron": "0.1.x",
+  "flatiron": "~0.1.0",
+  "plates":   "https://github.com/user/project/tarball/branch",
+  "stuff":    "git://github.com/user/project.git#commit-ish"
+},
 </code></pre>
 
-<h3 id="file-regions">File regions</h3>
-
-<h4 id="print-until-a-certain-line-is-met">Print until a certain line is met</h4>
-
-<pre><code class="language-bash">sed '/begin api/q'
+<pre><code class="language-json">"devDependencies": { ··· },
+"peerDependencies": { ··· },
+"optionalDependencies": { ··· },
 </code></pre>
 
-<h4 id="print-until-a-certain-line-is-met-but-not-that-line">Print until a certain line is met, but not that line</h4>
+<p>See <a href="./semver">Semver cheatsheet</a> for explanation of version ranges.</p>
 
-<pre><code class="language-bash">sed '/^# begin/,$d'
+<h3 id="scripts">Scripts</h3>
+
+<pre><code class="language-json">"scripts": {
+  "start": "node ./bin/xxx",       /* npm start */
+  "test": "vows --spec --isolate", /* npm test */
+  "postinstall": "...",
+  "prepublish": "grunt build",     /* after 'npm install' and before 'npm 
+                                      publish' */
+}
 </code></pre>
 
-<h4 id="print-everything-after-a-given-line">Print everything after a given line</h4>
+<h3 id="misc">Misc</h3>
 
-<pre><code class="language-bash">sed -n '/end api/,$p'
+<pre><code class="language-json">"private": true,
+"preferGlobal": true
 </code></pre>
+
+<h3 id="config">Config</h3>
+
+<pre><code class="language-json">{
+  "config": {
+    "foobar": "hello"
+  },
+  "scripts": {
+    "run": "echo $npm_package_config_foobar"
+  }
+}
+</code></pre>
+
+<p>Keys in <code>config</code> are exposed as env vars to scripts.</p>
+
+<h2 class="-one-column" id="references">References</h2>
+
+<ul class="-also-see">
+  <li><a href="http://package.json.nodejitsu.com/">http://package.json.nodejitsu.com/</a></li>
+  <li><code>npm help package.json</code></li>
+</ul>
 
   </main>
 </div>
@@ -257,7 +304,7 @@ gtag('config','UA-106902774-1');
       <details class='comments-details'>
         <summary>
           <strong class='count'>
-            <span class='disqus-comment-count' data-disqus-identifier="sed" data-disqus-url='https://devhints.io/sed'>0 Comments</span>
+            <span class='disqus-comment-count' data-disqus-identifier="package-json" data-disqus-url='https://devhints.io/package-json'>0 Comments</span>
           </strong>
           <span class='suffix'>for this cheatsheet.</span>
           <span class='fauxlink'>Write yours!</span>
@@ -269,7 +316,7 @@ gtag('config','UA-106902774-1');
         </div>
       </details>
     </div>
-    <noscript data-js-disqus='{"host":"devhints.disqus.com","url":"https://devhints.io/sed","identifier":"sed"}'></noscript>
+    <noscript data-js-disqus='{"host":"devhints.disqus.com","url":"https://devhints.io/package-json","identifier":"package-json"}'></noscript>
   </section>
 
 
@@ -326,14 +373,14 @@ gtag('config','UA-106902774-1');
       <div class='group'>
         <div class='related-posts-group'>
           
-            <h3>Other CLI cheatsheets</h3>
+            <h3>Other Node.js cheatsheets</h3>
           
 
           <ul class='related-post-list'>
             
               <li class='item related-post-item'>
-  <a href='./cron'>
-    <strong>Cron</strong>
+  <a href='./nodejs-stream'>
+    <strong>Node.js streams</strong>
     <span>
       cheatsheet
 
@@ -346,13 +393,11 @@ gtag('config','UA-106902774-1');
 
             
               <li class='item related-post-item'>
-  <a href='./homebrew'>
-    <strong>Homebrew</strong>
+  <a href='./nodejs-assert'>
+    <strong>assert</strong>
     <span>
       cheatsheet
 
-      
-      <abbr class='attribute-peg -new-layout hint--bottom' data-hint='New layout!'><span></span></abbr>
       
     </span>
   </a>
@@ -360,13 +405,11 @@ gtag('config','UA-106902774-1');
 
             
               <li class='item related-post-item'>
-  <a href='./httpie'>
-    <strong>httpie</strong>
+  <a href='./nodejs-fs'>
+    <strong>fs</strong>
     <span>
       cheatsheet
 
-      
-      <abbr class='attribute-peg -new-layout hint--bottom' data-hint='New layout!'><span></span></abbr>
       
     </span>
   </a>
@@ -374,13 +417,11 @@ gtag('config','UA-106902774-1');
 
             
               <li class='item related-post-item'>
-  <a href='./adb'>
-    <strong>adb (Android Debug Bridge)</strong>
+  <a href='./nodejs-path'>
+    <strong>path</strong>
     <span>
       cheatsheet
 
-      
-      <abbr class='attribute-peg -new-layout hint--bottom' data-hint='New layout!'><span></span></abbr>
       
     </span>
   </a>
@@ -388,13 +429,11 @@ gtag('config','UA-106902774-1');
 
             
               <li class='item related-post-item'>
-  <a href='./composer'>
-    <strong>composer</strong>
+  <a href='./nodejs-process'>
+    <strong>process</strong>
     <span>
       cheatsheet
 
-      
-      <abbr class='attribute-peg -new-layout hint--bottom' data-hint='New layout!'><span></span></abbr>
       
     </span>
   </a>
@@ -402,13 +441,11 @@ gtag('config','UA-106902774-1');
 
             
               <li class='item related-post-item'>
-  <a href='./fish-shell'>
-    <strong>Fish shell</strong>
+  <a href='./nodejs'>
+    <strong>Node.js API</strong>
     <span>
       cheatsheet
 
-      
-      <abbr class='attribute-peg -new-layout hint--bottom' data-hint='New layout!'><span></span></abbr>
       
     </span>
   </a>
@@ -532,7 +569,7 @@ function n(n,t,e){n.addEventListener?n.addEventListener(t,e):n.attachEvent("on"+
 "use strict";var e=u(require("./wrapify")),d=u(require("dom101/add-class")),t=u(require("dom101/on"));function u(e){return e&&e.__esModule?e:{default:e}}var a,o=document.querySelector("[data-js-main-body]");function r(){a||((0,d.default)(document.documentElement,"LoadDone"),a=!0)}o&&((0,e.default)(o),(0,d.default)(o,"-wrapified")),(0,t.default)(window,"load",r),setTimeout(r,5e3);
 },{"./wrapify":"hE9p","dom101/add-class":"G20n","dom101/on":"DJ2P"}]},{},["eoMl"], null)</script>
 <script src='./assets/packed/app.js?t=20200622185520'></script>
-
+<script src='https://cdn.jsdelivr.net/npm/prismjs@1.6.0/components/prism-json.min.js'></script>
 
 
 </body>
