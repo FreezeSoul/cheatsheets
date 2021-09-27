@@ -115,6 +115,7 @@
 <url><loc>https://devhints.io/google_analytics</loc></url>
 <url><loc>https://devhints.io/graphql</loc></url>
 <url><loc>https://devhints.io/gremlins</loc></url>
+<url><loc>https://devhints.io/grep</loc></url>
 <url><loc>https://devhints.io/gulp</loc></url>
 <url><loc>https://devhints.io/haml</loc></url>
 <url><loc>https://devhints.io/handlebars.js</loc></url>
@@ -142,6 +143,8 @@
 <url><loc>https://devhints.io/jekyll-github</loc></url>
 <url><loc>https://devhints.io/jekyll</loc></url>
 <url><loc>https://devhints.io/jest</loc></url>
+<url><loc>https://devhints.io/jinja</loc></url>
+<url><loc>https://devhints.io/jinja2</loc></url>
 <url><loc>https://devhints.io/jquery-cdn</loc></url>
 <url><loc>https://devhints.io/jquery</loc></url>
 <url><loc>https://devhints.io/js-appcache</loc></url>
@@ -174,6 +177,7 @@
 <url><loc>https://devhints.io/macos-mouse-acceleration</loc></url>
 <url><loc>https://devhints.io/make-assets</loc></url>
 <url><loc>https://devhints.io/makefile</loc></url>
+<url><loc>https://devhints.io/mako</loc></url>
 <url><loc>https://devhints.io/man</loc></url>
 <url><loc>https://devhints.io/markdown</loc></url>
 <url><loc>https://devhints.io/meow</loc></url>
