@@ -1,25 +1,29 @@
 ---
 title: Jest
 category: JavaScript libraries
-layout: 2017/sheet
 updated: 2020-06-17
 weight: -3
-tags: [Featurable]
 intro: |
   A quick overview to [Jest](https://facebook.github.io/jest/), a test framework for Node.js. This guide targets Jest v20.
+links:
+  - title: Jest documentation
+    url: https://jestjs.io/docs/getting-started
 ---
 
 Testing
 -------
-{: .-three-column}
+
+<!-- {: .-three-column} -->
 
 ### Quick start
-{: .-prime}
+
+<!-- {: .-prime} -->
 
 ```bash
 npm install --save-dev jest babel-jest
 ```
-{: data-line="1"}
+
+<!-- {: data-line="1"} -->
 
 ```js
 /* Add to package.json */
@@ -33,7 +37,7 @@ npm install --save-dev jest babel-jest
 npm test -- --watch
 ```
 
-See: [Getting started](http://facebook.github.io/jest/docs/en/getting-started.html)
+See: [Getting started](https://facebook.github.io/jest/docs/en/getting-started.html)
 
 ### Writing tests
 
@@ -45,7 +49,7 @@ describe('My work', () => {
 })
 ```
 
-See: [describe()](http://facebook.github.io/jest/docs/en/api.html#describename-fn), [test()](http://facebook.github.io/jest/docs/en/api.html#testname-fn), [expect()](http://facebook.github.io/jest/docs/en/expect.html#content)
+See: [describe()](https://facebook.github.io/jest/docs/en/api.html#describename-fn), [test()](https://facebook.github.io/jest/docs/en/api.html#testname-fn), [expect()](https://facebook.github.io/jest/docs/en/expect.html#content)
 
 ### BDD syntax
 
@@ -58,7 +62,7 @@ describe('My work', () => {
 ```
 
 `it` is an alias for `test`.
-See: [test()](http://facebook.github.io/jest/docs/en/api.html#testname-fn)
+See: [test()](https://facebook.github.io/jest/docs/en/api.html#testname-fn)
 
 ### Setup
 
@@ -72,7 +76,7 @@ beforeAll(() => { ... })
 afterAll(() => { ... })
 ```
 
-See: [afterAll() and more](http://facebook.github.io/jest/docs/en/api.html#afterallfn)
+See: [afterAll() and more](https://facebook.github.io/jest/docs/en/api.html#afterallfn)
 
 ### Focusing tests
 
@@ -81,7 +85,7 @@ describe.only(···)
 it.only(···) // alias: fit()
 ```
 
-See: [test.only](http://facebook.github.io/jest/docs/en/api.html#testonlyname-fn)
+See: [test.only](https://facebook.github.io/jest/docs/en/api.html#testonlyname-fn)
 
 
 ### Skipping tests
@@ -91,7 +95,7 @@ describe.skip(···)
 it.skip(···) // alias: xit()
 ```
 
-See: [test.skip](http://facebook.github.io/jest/docs/en/api.html#testskipname-fn)
+See: [test.skip](https://facebook.github.io/jest/docs/en/api.html#testskipname-fn)
 
 
 ### Optional flags
@@ -104,7 +108,8 @@ See: [test.skip](http://facebook.github.io/jest/docs/en/api.html#testskipname-fn
 
 Expect
 ------
-{: .-three-column}
+
+<!-- {: .-three-column} -->
 
 ### Basic expectations
 
@@ -117,7 +122,7 @@ expect(value)
 ```
 
 Note that `toEqual` is a deep equality check.
-See: [expect()](http://facebook.github.io/jest/docs/en/expect.html#expectvalue)
+See: [expect()](https://facebook.github.io/jest/docs/en/expect.html#expectvalue)
 
 ### Snapshots
 
@@ -207,7 +212,8 @@ test('works with promises', () => {
   })
 })
 ```
-{: data-line="2"}
+
+<!-- {: data-line="2"} -->
 
 ```js
 test('works with async/await', async () => {
@@ -215,10 +221,11 @@ test('works with async/await', async () => {
   ···
 })
 ```
-{: data-line="2"}
+
+<!-- {: data-line="2"} -->
 
 Return promises, or use async/await.
-See: [Async tutorial](http://facebook.github.io/jest/docs/en/tutorial-async.html)
+See: [Async tutorial](https://facebook.github.io/jest/docs/en/tutorial-async.html)
 
 ### Snapshots
 
@@ -228,31 +235,34 @@ it('works', () => {
   expect(output).toMatchSnapshot()
 })
 ```
-{: data-line="3"}
+
+<!-- {: data-line="3"} -->
 
 First run creates a snapshot. Subsequent runs match the saved snapshot.
-See: [Snapshot testing](http://facebook.github.io/jest/docs/en/snapshot-testing.html)
+See: [Snapshot testing](https://facebook.github.io/jest/docs/en/snapshot-testing.html)
 
 ### React test renderer
 
 ```jsx
 import renderer from 'react-test-renderer'
 ```
-{: .-setup}
+
+<!-- {: .-setup} -->
 
 ```jsx
 it('works', () => {
   const tree = renderer.create(
-    <Link page="http://www.facebook.com">Facebook</Link>
+    <Link page="https://www.facebook.com">Facebook</Link>
   ).toJSON()
 
   expect(tree).toMatchSnapshot()
 })
 ```
-{: data-line="2,3,4"}
+
+<!-- {: data-line="2,3,4"} -->
 
 React's test renderer can be used for Jest snapshots.
-See: [Snapshot test](http://facebook.github.io/jest/docs/en/tutorial-react-native.html#snapshot-test)
+See: [Snapshot test](https://facebook.github.io/jest/docs/en/tutorial-react-native.html#snapshot-test)
 
 ### Timers
 
@@ -268,7 +278,7 @@ it('works', () => {
 })
 ```
 
-See: [Timer Mocks](http://facebook.github.io/jest/docs/en/timer-mocks.html)
+See: [Timer Mocks](https://facebook.github.io/jest/docs/en/timer-mocks.html)
 
 ## Mock functions
 
@@ -282,7 +292,7 @@ const fn = jest.fn()
 const fn = jest.fn(n => n * n)
 ```
 
-See: [Mock functions](http://facebook.github.io/jest/docs/en/mock-functions.html#using-a-mock-function)
+See: [Mock functions](https://facebook.github.io/jest/docs/en/mock-functions.html#using-a-mock-function)
 
 ### Assertions
 
@@ -317,9 +327,10 @@ b = new Fn()
 Fn.mock.instances
 // → [a, b]
 ```
-{: data-line="1"}
 
-See: [.mock property](http://facebook.github.io/jest/docs/en/mock-functions.html#mock-property)
+<!-- {: data-line="1"} -->
+
+See: [.mock property](https://facebook.github.io/jest/docs/en/mock-functions.html#mock-property)
 
 ### Calls
 
@@ -334,9 +345,10 @@ fn.mock.calls.length   // → 2
 fn.mock.calls[0][0]    // → 123
 fn.mock.calls[1][0]    // → 456
 ```
-{: data-line="1,2,3"}
 
-See: [.mock property](http://facebook.github.io/jest/docs/en/mock-functions.html#mock-property)
+<!-- {: data-line="1,2,3"} -->
+
+See: [.mock property](https://facebook.github.io/jest/docs/en/mock-functions.html#mock-property)
 
 ### Return values
 
@@ -358,7 +370,8 @@ const fn = jest.fn()
   .mockImplementationOnce(() => 1)
   .mockImplementationOnce(() => 2)
 ```
-{: data-line="2,3"}
+
+<!-- {: data-line="2,3"} -->
 
 ```js
 fn()    // → 1
@@ -366,7 +379,9 @@ fn()    // → 2
 ```
 
 ## References
-{: .-one-column}
 
-- <http://facebook.github.io/jest/>
-{: .-also-see}
+<!-- {: .-one-column} -->
+
+- <https://facebook.github.io/jest/>
+
+<!-- {: .-also-see} -->

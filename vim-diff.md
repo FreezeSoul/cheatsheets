@@ -1,25 +1,30 @@
 ---
 title: Vimdiff
 category: Vim
-layout: 2017/sheet
 updated: 2018-12-06
 weight: -10
 intro: |
-  [Vim](http://www.vim.org/) is a very efficient text editor. This reference was made for Vim 8.0.
+  [Vim](https://www.vim.org/) is a very efficient text editor. This reference was made for Vim 8.0.
+links:
+  - title: Vim
+    url: https://www.vim.org/
 ---
 
 Getting started
 ---------------
-{: .-three-column}
+
+<!-- {: .-three-column} -->
 
 ### Navigating
-{: .-prime}
+
+<!-- {: .-prime} -->
 
 | Shortcut       | Description                      |
 | ---            | ---                              |
 | `]c`           | Next difference                  |
 | `[c`           | Previous difference              |
-{: .-shortcuts}
+
+<!-- {: .-shortcuts} -->
 
 ### Editing
 
@@ -30,7 +35,8 @@ Getting started
 | ---            | ---                              |
 | `:diffupdate`  | Re-scan the files for differences.                    |
 | `ZQ`           | Quit without checking changes    |
-{: .-shortcuts}
+
+<!-- {: .-shortcuts} -->
 
 ### Folds
 
@@ -49,12 +55,13 @@ Getting started
 | `zr`          | Fold less _(foldlevel -= 1)_ |
 | ---           | ---                          |
 | `zx`          | Update folds                 |
-{: .-shortcuts}
+
+<!-- {: .-shortcuts} -->
 
 
 Also see
 --------
 
 - [Vim cheatsheet](https://vim.rtorr.com/) _(vim.rotrr.com)_
-- [Vim documentation](http://vimdoc.sourceforge.net/htmldoc/) _(vimdoc.sourceforge.net)_
-- [Interactive Vim tutorial](http://openvim.com/) _(openvim.com)_
+- [Vim documentation](https://vimdoc.sourceforge.net/htmldoc/) _(vimdoc.sourceforge.net)_
+- [Interactive Vim tutorial](https://openvim.com/) _(openvim.com)_

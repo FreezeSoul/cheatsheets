@@ -1,6 +1,11 @@
 ---
 title: Arel
 category: Rails
+intro: |
+  Arel is an SQL abstraction library built into Ruby on Rails.
+links:
+  - title: https://github.com/rails/arel
+    url: https://github.com/rails/arel
 ---
 
 ### Tables
@@ -123,7 +128,3 @@ all_time      = photos_with_credits.count
 this_month    = photos_with_credits.where(photos[:created_at].gteq(Date.today.beginning_of_month))
 recent_photos = photos_with_credits.where(photos[:created_at].gteq(Date.today.beginning_of_month)).limit(5)
 ```
-
-## Reference
-
-* <http://github.com/rails/arel>

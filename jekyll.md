@@ -1,7 +1,6 @@
 ---
 title: Jekyll
 jekyll_escape: true
-layout: 2017/sheet
 prism_languages: [bash, yaml, ruby]
 category: Jekyll
 updated: 2018-08-25
@@ -35,7 +34,7 @@ END
 bundle exec jekyll serve
 ```
 
-See: [Jekyll quickstart](http://jekyllrb.com/docs/quickstart/)<br>
+See: [Jekyll quickstart](https://jekyllrb.com/docs/quickstart/)<br>
 See: [github/pages-gem](https://github.com/github/pages-gem)
 
 ### Directories
@@ -64,10 +63,12 @@ See: [github/pages-gem](https://github.com/github/pages-gem)
 └── _site/
     └── ...
 ```
-{: .-box-chars}
+
+<!-- {: .-box-chars} -->
 
 ## Front-matter
-{: .-three-column}
+
+<!-- {: .-three-column} -->
 
 ### Basic frontmatter
 
@@ -78,10 +79,11 @@ title: Hello
 ---
 Hello! this is my post.
 ```
-{: data-line="1,2,3,4"}
+
+<!-- {: data-line="1,2,3,4"} -->
 
 Attach metadata to a page by adding them on top of the page, delimited by `---`.
-See: [Front-matter](http://jekyllrb.com/docs/frontmatter/)
+See: [Front-matter](https://jekyllrb.com/docs/frontmatter/)
 
 ### Other frontmatter stuff
 
@@ -96,7 +98,8 @@ tags: ['html', 'css']
 ### Configuration
 
 In `_config.yml`:
-{: .-setup}
+
+<!-- {: .-setup} -->
 
 ```yaml
 source: .
@@ -108,11 +111,12 @@ include: ['.htaccess']
 ```
 
 All config keys are optional.
-See: [Configuration](http://jekyllrb.com/docs/configuration/)
+See: [Configuration](https://jekyllrb.com/docs/configuration/)
 
 Markup
 ------
-{: .-three-column}
+
+<!-- {: .-three-column} -->
 
 ### Page variables
 
@@ -121,7 +125,8 @@ Markup
   {{ page.title }}
 </title>
 ```
-{: data-line="2"}
+
+<!-- {: data-line="2"} -->
 
 
 ### Filters
@@ -131,7 +136,8 @@ Markup
   {{ page.description | truncate_words: 20 }}
 </p>
 ```
-{: data-line="2"}
+
+<!-- {: data-line="2"} -->
 
 ### Loops
 
@@ -143,7 +149,8 @@ Markup
   </a>
 {% endfor %}
 ```
-{: data-line="1,6"}
+
+<!-- {: data-line="1,6"} -->
 
 ### Dates
 
@@ -162,7 +169,8 @@ Markup
   ...
 {% endif %}
 ```
-{: data-line="1,3,5,7 }
+
+<!-- {: data-line="1,3,5,7"} -->
 
 ```html
 {% if page.category == 'React' %}
@@ -182,20 +190,23 @@ Markup
      Thank you for your order!
 {% endcase %}
 ```
-{: data-line="1,2,4,6,8"}
+
+<!-- {: data-line="1,2,4,6,8"} -->
 
 ### Includes (partials)
 
 ```
 {% include header.html %}
 ```
-{: data-line="1"}
+
+<!-- {: data-line="1"} -->
 
 ```html
 <!-- Including local vars -->
 {% include header.html page=page %}
 ```
-{: data-line="2"}
+
+<!-- {: data-line="2"} -->
 
 ### Comments
 
@@ -204,27 +215,35 @@ Markup
   This is a comment!
 {% endcomment %}
 ```
-{: data-line="1,3"}
+
+<!-- {: data-line="1,3"} -->
 
 ## Variables
 
 ### Top-level variables
 
 
+| Variable | Description |
+| --- | --- |
 | `{{ site }}` | Data from `config.yml` |
 | `{{ page }}` | From frontmatter, and page-specific info |
 | `{{ content }}` | HTML content (use in layouts) |
 | `{{ paginator }}` | Paginator |
 
-See: [Variables](http://jekyllrb.com/docs/variables/)
+See: [Variables](https://jekyllrb.com/docs/variables/)
 
 ### Site
 
 ```html
 {{ site.time }}
 ```
-{: .-setup}
 
+<!-- {: .-setup} -->
+
+#### Variables
+
+| Variable | Description |
+| --- | --- |
 | `site.time` | Current time |
 | `site.pages` | List of pages |
 | `site.posts` | List of blog posts |
@@ -258,15 +277,21 @@ See: [Variables](http://jekyllrb.com/docs/variables/)
 
 Filters
 -------
-{: .-three-column}
+
+<!-- {: .-three-column} -->
 
 ### Dates
 
 ```ruby
 {{ site.time | date: "%Y %m %d" }}
 ```
-{: .-setup}
 
+<!-- {: .-setup} -->
+
+#### Filters
+
+| Filter | Output |
+| --- | --- |
 | `date_to_xmlschema` | → `2008-11-07T13:07:54-08:00` |
 | `date_to_rfc822` | → `Mon, 07 Nov 2008 13:07:54 -0800` |
 | `date_to_string` | → `07 Nov 2008` |
@@ -279,7 +304,10 @@ Filters
 ```ruby
 {{ page.description | markdownify }}
 ```
-{: .-setup}
+
+<!-- {: .-setup} -->
+
+#### Filters
 
 | Filter | Description |
 | --- | --- |
@@ -295,7 +323,10 @@ Filters
 ```ruby
 {{ site.pages | where: "year", "2014" }}
 ```
-{: .-setup}
+
+<!-- {: .-setup} -->
+
+#### Filters
 
 | Filter | Description |
 | --- | --- |
@@ -325,7 +356,10 @@ Filters
 ```ruby
 {{ page.title | default: "xxx" }}
 ```
-{: .-setup}
+
+<!-- {: .-setup} -->
+
+#### Filters
 
 | Filter                             | Description |
 | ---                                | ---         |
@@ -358,14 +392,17 @@ Filters
 | ---                                | ---         |
 | `slice:` _-3, 3_                   |             |
 
-See: [String filters](http://docs.shopify.com/themes/liquid-documentation/filters)
+See: [String filters](https://docs.shopify.com/themes/liquid-documentation/filters)
 
 ### String filters (Jekyll-only)
 
 ```ruby
 {{ page.excerpt | number_of_words }}
 ```
-{: .-setup}
+
+<!-- {: .-setup} -->
+
+#### Filters
 
 | Filter | Description |
 | --- | --- |
@@ -381,7 +418,10 @@ See: [String filters](http://docs.shopify.com/themes/liquid-documentation/filter
 ```
 {{ site.posts.size | minus: 2 }}
 ```
-{: .-setup}
+
+<!-- {: .-setup} -->
+
+#### Filters
 
 | Filter | Description |
 | --- | --- |
@@ -400,14 +440,15 @@ See: [String filters](http://docs.shopify.com/themes/liquid-documentation/filter
 ### Paginator setup
 
 Add this to `_config.yml`:
-{: .-setup}
+
+<!-- {: .-setup} -->
 
 ```yml
 paginate: 5
 paginate_path: "blog/:num"
 ```
 
-See: [Paginator](http://jekyllrb.com/docs/pagination/)
+See: [Paginator](https://jekyllrb.com/docs/pagination/)
 
 ### Numbers
 
@@ -444,23 +485,29 @@ See: [Paginator](http://jekyllrb.com/docs/pagination/)
 
 ### Paths
 
-    _posts/YEAR-MONTH-DAY-title.md
+```
+_posts/YEAR-MONTH-DAY-title.md
+```
 
-See: [Blogging](http://jekyllrb.com/docs/posts/)
+See: [Blogging](https://jekyllrb.com/docs/posts/)
 
 ### Image paths
 
-    ![My helpful screenshot]({{ site.url }}/assets/screenshot.jpg)
+```
+![My helpful screenshot]({{ site.url }}/assets/screenshot.jpg)
+```
 
-See: [Image paths](http://jekyllrb.com/docs/posts/#including-images-and-resources)
+See: [Image paths](https://jekyllrb.com/docs/posts/#including-images-and-resources)
 
 ### Drafts
 
-    vi _drafts/a-draft-post.md
-    jekyll build --drafts
+```
+vi _drafts/a-draft-post.md
+jekyll build --drafts
+```
 
 Posts in `_drafts` only show up in development, but not production.
-See: [Drafts](http://jekyllrb.com/docs/drafts/)
+See: [Drafts](https://jekyllrb.com/docs/drafts/)
 
 ### Defining excerpts
 
@@ -474,7 +521,7 @@ Hello, let's talk about cats. (···)
 ```
 
 Put a key `excerpt` in the frontmatter.
-See: [Excerpts](http://jekyllrb.com/docs/posts/#post-excerpts)
+See: [Excerpts](https://jekyllrb.com/docs/posts/#post-excerpts)
 
 ### Displaying excerpts
 
@@ -503,13 +550,15 @@ Alternatively, you can put excerpts inline in your post by defining `excerpt_sep
 
 ### Permalinks
 
-    # _config.yml
-    permalink: date   # /:categories/:year/:month/:day/:title.html
-    permalink: pretty # /:categories/:year/:month/:day/:title/
-    permalink: none   # /:categories/:title.html
-    permalink: "/:title"
+```
+# _config.yml
+permalink: date   # /:categories/:year/:month/:day/:title.html
+permalink: pretty # /:categories/:year/:month/:day/:title/
+permalink: none   # /:categories/:title.html
+permalink: "/:title"
+```
 
-See: [Permalinks](http://jekyllrb.com/docs/permalinks/)
+See: [Permalinks](https://jekyllrb.com/docs/permalinks/)
 
 ## More features
 
@@ -518,7 +567,8 @@ See: [Permalinks](http://jekyllrb.com/docs/permalinks/)
 ```
 _data/members.yml
 ```
-{: .-setup}
+
+<!-- {: .-setup} -->
 
 ```
 {% for member in site.data.members %}
@@ -526,7 +576,7 @@ _data/members.yml
 {% endfor %}
 ```
 
-See: [Data](http://jekyllrb.com/docs/datafiles/)
+See: [Data](https://jekyllrb.com/docs/datafiles/)
 
 ### Collections
 
@@ -535,7 +585,8 @@ See: [Data](http://jekyllrb.com/docs/datafiles/)
 collections:
   - authors
 ```
-{: .-setup}
+
+<!-- {: .-setup} -->
 
 ```yml
 # _/authors/a-n-roquelaire.md
@@ -549,7 +600,7 @@ real_name: Anne Rice
 {% for author in site.authors %}
 ```
 
-See: [Collections](http://jekyllrb.com/docs/collections/)
+See: [Collections](https://jekyllrb.com/docs/collections/)
 
 ### Code highlighter
 
@@ -567,7 +618,8 @@ Integration
 ### Bundler
 
 In `_plugins/bundler.rb`:
-{: .-setup}
+
+<!-- {: .-setup} -->
 
 ```ruby
 require "bunder/setup"
@@ -581,15 +633,17 @@ Bundler.require :default
 
 Also see
 --------
-{: .-one-column}
 
-* [Jekyll docs](http://jekyllrb.com/docs/home/) _jekyllrb.com_
+<!-- {: .-one-column} -->
+
+* [Jekyll docs](https://jekyllrb.com/docs/home/) _jekyllrb.com_
 * [CloudCannon Jekyll cheatsheet](https://learn.cloudcannon.com/jekyll-cheat-sheet/) _cloudcannon.com_
-* [Jekyll: templates](http://jekyllrb.com/docs/templates/) _jekyllrb.com_
-* [Liquid: output](http://docs.shopify.com/themes/liquid-basics/output) _shopify.com_
-* [Liquid: logic](http://docs.shopify.com/themes/liquid-basics/logic) _shopify.com_
-* [Liquid: filters](http://docs.shopify.com/themes/liquid-documentation/filters) _shopify.com_
+* [Jekyll: templates](https://jekyllrb.com/docs/templates/) _jekyllrb.com_
+* [Liquid: output](https://docs.shopify.com/themes/liquid-basics/output) _shopify.com_
+* [Liquid: logic](https://docs.shopify.com/themes/liquid-basics/logic) _shopify.com_
+* [Liquid: filters](https://docs.shopify.com/themes/liquid-documentation/filters) _shopify.com_
 * [Liquid for designers](https://github.com/Shopify/liquid/wiki/Liquid-for-Designers) _github.com/Shopify_
-{: .-also-see}
+
+<!-- {: .-also-see} -->
 
 {% endraw %}

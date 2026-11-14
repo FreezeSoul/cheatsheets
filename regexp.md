@@ -1,7 +1,6 @@
 ---
 title: regexp
 category: Others
-layout: 2017/sheet
 weight: -1
 authors:
   - github: rizqyhi
@@ -14,7 +13,8 @@ description: |
 ---
 
 ## RegExp
-{: .-three-column}
+
+<!-- {: .-three-column} -->
 
 ### Character classes
 
@@ -24,9 +24,11 @@ description: |
 | `\w`          | Word                                     |
 | `\d`          | Digit                                    |
 | `\s`          | Whitespace                               |
+| ---           | ---                                      |
 | `\W`          | Not word                                 |
 | `\D`          | Not digit                                |
 | `\S`          | Not whitespace                           |
+| ---           | ---                                      |
 | `[abc]`       | Any of a, b, or c                        |
 | `[a-e]`       | Characters between `a` and `e`           |
 | `[1-9]`       | Digit between `1` and `9`                |
@@ -35,18 +37,22 @@ description: |
 
 ### Anchors
 
-| Pattern | Description             |
-| ------- | ----------------------- |
-| `\G`    | Start of match          |
-| `^`     | Start of string         |
-| `$`     | End of string           |
-| `\A`    | Start of string         |
-| `\Z`    | End of string           |
-| `\z`    | Absolute end of string  |
-| `\b`    | A word boundry          |
-| `\B`    | Non-word boundry        |
-| `^abc`  | Start with `abc`        |
-| `abc$`  | End with `abc`          |
+| Pattern | Description            |
+| ------- | ---------------------- |
+| `\G`    | Start of match         |
+| `^`     | Start of string \*     |
+| `$`     | End of string \*       |
+| `\A`    | Start of string        |
+| `\Z`    | End of string          |
+| `\z`    | Absolute end of string |
+| ---     | ---                    |
+| `\b`    | A word boundary        |
+| `\B`    | Non-word boundary      |
+| ---     | ---                    |
+| `^abc`  | Start with `abc`       |
+| `abc$`  | End with `abc`         |
+
+For multiline patterns (`m` flag), `^` and `$` will act as start and end of line.
 
 ### Escaped characters
 
@@ -59,11 +65,12 @@ description: |
 
 ### Groups
 
-| Pattern   | Description                    |
-| --------- | ------------------------------ |
-| `(abc)`   | Capture group                  |
-| `(a|b)`   | Match `a` or `b`               |
-| `(?:abc)` | Match `abc`, but don't capture |
+| Pattern   | Description                                              |
+| --------- | -------------------------------------------------------- |
+| `(abc)`   | Capture group                                            |
+| `(a|b)`   | Match `a` or `b`                                         |
+| `(?:abc)` | Match `abc`, but don't capture                           |
+| `\1`      | Substituted with text matched of the 1st capturing group |
 
 
 ### Quantifiers
